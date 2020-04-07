@@ -20,7 +20,7 @@ Boxed In allows users to share funny stories, recommend memes and videos, listen
     - `feeds.py`: Flask file for #ZoomLife, Memes, Meditations and Support feeds
     - `delivery.py`: Flask file for sending and receiving boxes
     - `helpers.py`: Flask file of helper functions
-    - ** `static` **: stored files, CSS and JS
+    - **`static`**: stored files, CSS and JS
         - *`image-uploads`*: photos and memes
         - *`meditation-audios`*: soundtracks for mediations
         - *`meditation-img`*: images for meditation cards
@@ -33,7 +33,7 @@ Boxed In allows users to share funny stories, recommend memes and videos, listen
         - `feed.css`: CSS for #ZoomLife, Memes and Support feeds
         - `meditations.css`: CSS for Meditation screen
         - `send.css`: CSS for send and receive package screens
-    - ** `templates` **: HTML Layouts
+    - **`templates`**: HTML Layouts
         - `index.html`: home page
         - `user-layout.html`: layout for registering and logging in users, base for `login.html`. `register.html`, `introduction.html` and `error.html`
         - `main-layout.html`: layout for feeds, base for `zoomlife.html`, `memes.html`, `meditations.html`, `support.html`
@@ -43,7 +43,7 @@ Frameworks used: Flask (Python, HTML), Bootstrap (CSS), Animate.css (CSS, JS)
 
 ## Misc
 
-** TO DO LIST **
+**TO DO LIST**
 
 - [x] Build home screen
 - [x] Configure sign up
