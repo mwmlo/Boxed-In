@@ -1,0 +1,73 @@
+/* HOME PAGE */
+
+/* Background */
+.background {
+  background-color: rgb(235, 218, 194);
+  width: 100vw;
+  height: 100vh;
+}
+
+.boxBackground {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1000;
+  opacity: 50%;
+  pointer-events: none;
+}
+
+/* Title box */
+#homeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10vh auto;
+    text-align: center;
+    width: 50vw;
+    border: 5px solid #5D626E;
+    padding: 8vh 0;
+    background-color: antiquewhite;
+}
+
+/* Title font styling */
+#welcome-title {
+  font-family: 'Libre Baskerville', serif;
+  max-width: 60vw;
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+#slogan {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3vw;
+  margin-top: 3vh;
+  color: #5D626E;
+}
+
+/* Sign up and Log in buttons */
+#home-buttons {
+  margin-top: 5vh;
+  z-index: 100;
+}
+
+.btn {
+  flex-grow: 1;
+  padding: 10px;
+  min-width: 10vw;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#signup {
+  font-size: 1.5vw;
+}
+
+#login {
+  margin-left: 10vh;
+  font-size: 1.5vw;
+}
+
+#signup:hover, #login:hover {
+  background-color: #455EB2;
+  border: 0px;
+}

@@ -1,0 +1,72 @@
+/* MEDITATION SCREEN */
+
+.meditation-view {
+  display: flex;
+  width: 70vw;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Cards containing meditations */
+
+#med-card {
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 30px;
+  width: 25vw;
+  font-family: "Work Sans", sans-serif;
+  margin: 25px;
+}
+
+.card i {
+  float: left;
+  cursor: pointer;
+  font-size: 45px;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  padding: 20px;
+}
+
+/* Play meditation controls */
+
+.timeline {
+  width: 80%;
+  height: 2px;
+  margin-top: 20px;
+  margin-left: 10px;
+  float: left;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3); 
+}
+
+.playhead {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: -3px;
+  background: black;
+  cursor: pointer; 
+}
+
+/* Animations */
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(50px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.moving {
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
