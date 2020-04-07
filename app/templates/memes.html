@@ -1,0 +1,34 @@
+<!-- MEMES PAGE -->
+
+{% extends "main-layout.html" %}
+
+{% block title %}
+Memes
+{% endblock %}
+
+{% block name %}
+{{ username }}
+{% endblock %}
+
+{% block header %}
+Memes
+{% endblock %}
+
+{% block guide %}
+<p>When life gives you lemons, you look at memes and laugh at videos.</p>
+{% endblock %}
+
+{% block main %}
+<!-- Add every post from database -->
+{% for post in memePosts %}
+<div class="card" id="card">
+    <div id="card-header">
+        <p>{{ post[3] }}</p>
+        <p>{{ post[1] }}</p>
+    </div>
+    <div class="card-body">
+        <div class="card-text">{{ post[2]|safe }}</div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "main-layout.html" %}
+
+{% block title %}
+#ZoomLife
+{% endblock %}
+
+{% block name %}
+{{ username }}
+{% endblock %}
+
+{% block header %}
+#ZoomLife
+{% endblock %}
+
+{% block guide %}
+<p>Share a funny experience to brighten up someone else's day.</p>
+{% endblock %}
+
+{% block main %}
+<!-- Add every post from database -->
+{% for post in zoomLifePosts %}
+<div class="card" id="card">
+  <div id="card-header">
+    <p>{{ post[3] }}</p>
+    <p>{{ post[1] }}</p>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ post[2] }}</p>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

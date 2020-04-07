@@ -1,0 +1,27 @@
+<!-- SIGN UP PAGE -->
+{% extends "user-layout.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block main %}
+<h1>Sign up</h1>
+<p>Your password should have more than 8 characters, at least 3 letters and at least 3 numbers.</p>
+<br>
+
+<form action="/register" method="post" id="fillInForm">
+  <div class="form-group">
+    <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" id="field">
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="password" placeholder="Password" type="password" id="field">
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="confirmation" placeholder="Confirm password" type="password" id="field">
+  </div>
+  <br>
+  <button class="btn btn-primary" type="submit" id="enterButton">Register</button>
+</form>
+
+{% endblock %}

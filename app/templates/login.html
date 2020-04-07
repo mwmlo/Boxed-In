@@ -1,0 +1,22 @@
+<!-- LOGIN PAGE -->
+{% extends "user-layout.html" %}
+
+{% block title %}
+Log In
+{% endblock %}
+
+{% block main %}
+  <h1>Log In</h1>
+  <br>
+  <form action="/login" method="post" id="fillInForm">
+    <div class="form-group">
+      <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" id="field">
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="password" placeholder="Password" type="password" id="field">
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" id="enterButton">Log In</button>
+  </form>
+
+{% endblock %}

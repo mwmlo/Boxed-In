@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS Styling -->
+    <link href="static/userForms.css" rel="stylesheet">
+    <link href="/static/feed.css" rel="stylesheet">
+    <link href="/static/meditations.css" rel="stylesheet">
+    <link href="/static/send.css" rel="stylesheet">
+    <link href="/static/index.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Boxed In: {% block title %}{% endblock %}</title>
+
+</head>
+
+<body>
+
+    <main id="main-screen">
+
+        <!-- Sidebar navigation-->
+        <div id="sidebar">
+
+            <a href="/logout"><img src="/static/vectors/boxLogo.svg" id="logo"></a>
+            <h3>Welcome, {% block name %}{% endblock %}</h3>
+
+            <!-- Page navigation -->
+            <a href="/zoomlife">#ZoomLife</a>
+            <a href="/memes">Memes</a>
+            <a href="/meditations">Meditations</a>
+            <a href="/support">Support</a>
+
+            <!-- User specific packages -->
+            <div id="package" style="margin-top: 5vh;">
+                <img src="/static/vectors/sendBox.svg" class="package-icon"">
+                <a href="/send">Send a box</a>
+            </div>
+
+            <div id="package2">
+                <img src="/static/vectors/openBox.svg" class="package-icon">
+                <a href="/receive">Your boxes</a>
+            </div>
+
+        </div>
+
+        <div class="mainContent" id="mainContent">
+
+            <!-- Title  for page -->
+            <header id="top">
+                <div id="header">{% block header %}{% endblock %}</div>
+                <div id="guide">{% block guide %}{% endblock %}</div>
+            </header>
+
+            <!-- Main content/feed -->
+            <div id="boxMainView">
+                {% block main %}{% endblock %}
+            </div>
+
+            <img src="/static/vectors/boxStack.svg" class="boxBackground">
+
+        </div>
+
+    </main>
+
+    {% block modals %}
+    {% endblock %}
+
+    <script type="text/javascript" src="/static/hoverAnimations.js"></script>
+
+</body>
+
+</html>

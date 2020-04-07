@@ -1,0 +1,103 @@
+<!-- MEDITATIONS -->
+{% extends "main-layout.html" %}
+
+{% block title %}
+Meditation
+{% endblock %}
+
+{% block name %}
+{{ username }}
+{% endblock %}
+
+{% block header %}
+Meditations
+{% endblock %}
+
+{% block guide %}
+<p>Thanks to Mr Colonel for providing meditations to relax.</p>
+{% endblock %}
+
+{% block main %}
+<div class="meditation-view">
+
+  <!-- First meditation card -->
+  <div class="card" id="med-card">
+
+    <!-- Image -->
+    <div class="view">
+      <img class="card-img-top" id="img1" src="static/meditation-img/med1.png">
+    </div>
+
+    <div class="card-body text-center">
+
+      <h4>Body Scan</h4>
+      <audio id="music1" preload="true">
+        <source src="static/meditation-audios/bodyScan.m4a">
+      </audio>
+
+      <!-- Audio controls -->
+      <div id="audioplayer">
+        <i id="pButton1" class="material-icons">play_arrow</i>
+        <div class="timeline" id="timeline1">
+          <div class="playhead" id="playhead1"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Second meditation card -->
+  <div class="card" id="med-card">
+
+    <!-- Image -->
+    <div class="view">
+      <img class="card-img-top" id="img2" src="static/meditation-img/med2.png">
+    </div>
+
+    <div class="card-body text-center">
+
+      <h4>Breathe</h4>
+      <audio id="music2" preload="true">
+        <source src="static/meditation-audios/breathing.m4a">
+      </audio>
+
+      <!-- Audio controls -->
+      <div id="audioplayer">
+        <i id="pButton2" class="material-icons">play_arrow</i>
+        <div class="timeline" id="timeline2">
+          <div class="playhead" id="playhead2"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Third meditation card -->
+  <div class="card" id="med-card">
+
+    <!-- Image -->
+    <div class="view">
+      <img class="card-img-top" id="img3" src="static/meditation-img/med3.png">
+    </div>
+
+    <div class="card-body text-center">
+
+      <h4>Loving Kindness</h4>
+      <audio id="music3" preload="true">
+        <source src="static/meditation-audios/love.m4a">
+      </audio>
+
+      <!-- Audio controls -->
+      <div id="audioplayer">
+        <i id="pButton3" class="material-icons">play_arrow</i>
+        <div class="timeline" id="timeline3">
+          <div class="playhead" id="playhead3"></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

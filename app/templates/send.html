@@ -1,0 +1,197 @@
+{% extends "box-layout.html" %}
+
+{% block title %}
+Send a box
+{% endblock %}
+
+{% block name %}
+{{ username }}
+{% endblock %}
+
+{% block header %}
+Send a box
+{% endblock %}
+
+{% block guide %}
+Looking for suggestions? <br> PROMPT: What made you laugh today?
+{% endblock %}
+
+{% block main %}
+
+<p id="subtitle">Create a collection of stories, memes, meditations, support posts and messages to send to another
+    student. Once your box has been opened, its contents will also be shared to other users.</p>
+
+<div class="boxScreen">
+
+    <div class="list-group animated slideInLeft slow" id="list">
+
+        <a class="list-group-item list-group-item-action disabled" id="addToBox">Add to your box.</a>
+
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#zoomForm">Share
+            your
+            #ZoomLife.</a>
+
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#memeForm">Upload a
+            meme.</a>
+
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#songForm">Recommend
+            a
+            song/video.</a>
+
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#medForm">Send a
+            meditation.</a>
+
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#messageForm">Write
+            a
+            supportive message.</a>
+
+    </div>
+
+    <div class="box animated slideInRight slow">
+        <h4>Your current box contents:</h4>
+
+        {% for item in boxList %}
+        {% if item != None %}
+        <div class="item">{{ item|safe }}</div>
+        {% endif %}
+        {% endfor %}
+
+        <a href="/release"><button class="btn btn-primary" id="submit" type="submit">Send your box!</button></a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block modals %}
+<!-- Zoom Modal -->
+<div class="modal fade" id="zoomForm" tabindex="-1" role="dialog " aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" id="modalForm">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Share a funny experience that happened on Zoom.</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/send" method="post">
+                    <div class="form-group">
+                        <textarea class="form-control form-control-lg" id="zoomText" rows="5"
+                            name="zoomText"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Meme Modal -->
+<div class="modal fade" id="memeForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" id="modalForm">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Add a meme.</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/send" method="post" enctype="multipart/form-data">
+                    <label for="uploadMeme" style="font-size: 25px;">Select a photo:</label>
+                    <input type="file" class="form-control-file" id="uploadMeme" name="uploadMeme">
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="songForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" id="modalForm">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Share a song or video that might cheer someone up.</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/send" method="post">
+                    <input type="url" class="form-control form-control-lg" id="shareVideo" name="shareVideo"
+                        placeholder="Link to video.">
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Meditation Modal -->
+<div class="modal fade" id="medForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" id="modalForm">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Recommend a meditation.</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/send" method="post">
+                    <select class="form-control form-control-lg" name="selectMed">
+                        <option>I recommend the Body Scan Meditation!</option>
+                        <option>The Breathing Meditation is awesome!</option>
+                        <option>I found the Loving Kindness Meditation to help a lot!</option>
+                    </select>
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Message Modal -->
+<div class="modal fade" id="messageForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" id="modalForm">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Write a supportive message.</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="/send" method="post">
+                    <div class="form-group">
+                        <textarea class="form-control form-control-lg" id="messageText" name="messageText"
+                            rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

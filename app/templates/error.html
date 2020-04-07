@@ -1,0 +1,23 @@
+<!-- ERROR PAGE -->
+{% extends "user-layout.html" %}
+
+{% block title %}
+Error
+{% endblock %}
+
+{% block main %}
+
+<div style="width: 40vw">
+    <h1 style="font-size: 5vw;">Sorry, there was an error.</h1>
+    <p style="font-size: 2vw;">{{ errorMessage }}</p>
+</div>
+
+<input type="button" value="Back" id="enterButton" onclick="goBack()">
+
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
+
+{% endblock %}

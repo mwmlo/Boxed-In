@@ -1,0 +1,35 @@
+<!-- SUPPORT PAGE -->
+{% extends "main-layout.html" %}
+
+{% block title %}
+Support
+{% endblock %}
+
+{% block name %}
+{{ username }}
+{% endblock %}
+
+{% block header %}
+Support
+{% endblock %}
+
+{% block guide %}
+<p>Cheer yourself up with support from the community.</p>
+{% endblock %}
+
+{% block main %}
+<!-- Add every post in the database -->
+{% for post in supportPosts %}
+<div class="card" id="card">
+  <!-- Username and date -->
+  <div id="card-header">
+    <p>{{ post[3] }}</p>
+    <p>{{ post[1] }}</p>
+  </div>
+  <!-- Post content -->
+  <div class="card-body">
+    <p class="card-text">{{ post[2] }}</p>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
