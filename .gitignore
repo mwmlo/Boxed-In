@@ -11,4 +11,4 @@ venv.bak/
 __pycache__/
 boxedin.db
 
-image-uploads/
+static/image-uploads/
