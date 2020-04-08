@@ -10,10 +10,16 @@ Boxed In allows users to share funny stories, recommend memes and videos, listen
 2. Users can upload and link content into a virtual care box. When submitted, the box's contents will be  sent to another random user.
 3. When the receiver opens the box, the contents of the box will also be shared publicly on the respective feeds (#ZoomLife, Memes and Support).
 
+## Sample Screens
+**Log In Screen**
 ![Log In Screen](https://drive.google.com/uc?id=1etq0PRGHJRuHNNFRxRTyvaCJhQCFi3nc)
+**Memes Feed**
 ![Memes Feed](https://drive.google.com/uc?id=1M2rmD0FJTRBQLMIABkBUUDL8EI6Iub2c)
+**Meditations**
 ![Meditations](https://drive.google.com/uc?id=15MHUf4rfShku_YwznTOcnlp7_xKKfufX)
+**Send Boxes**
 ![Send Boxes](https://drive.google.com/uc?id=11XNGAB8A-9ttONDPquefj7jptXXbuOKPw)
+**Receive Boxes**
 ![Receive Boxes](https://drive.google.com/uc?id=1abnJCmCeFTf7AdS-UWjEHkBZVNN7yUEJ)
 
 ## File system
