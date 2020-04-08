@@ -36,6 +36,8 @@
 
     <main id="main-screen">
 
+        <img src="/static/vectors/boxStack.svg" class="boxBackground">
+
         <!-- Sidebar navigation-->
         <div id="sidebar">
 
@@ -50,7 +52,7 @@
 
             <!-- User specific packages -->
             <div id="package" style="margin-top: 5vh;">
-                <img src="/static/vectors/sendBox.svg" class="package-icon"">
+                <img src="/static/vectors/sendBox.svg" class="package-icon">
                 <a href="/send">Send a box</a>
             </div>
 
@@ -73,8 +75,6 @@
             <div id="boxMainView">
                 {% block main %}{% endblock %}
             </div>
-
-            <img src="/static/vectors/boxStack.svg" class="boxBackground">
 
         </div>
 

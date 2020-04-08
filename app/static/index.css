@@ -8,13 +8,12 @@
 }
 
 .boxBackground {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -1000;
-  opacity: 50%;
-  pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 70%;
+    pointer-events: none;
 }
 
 /* Title box */

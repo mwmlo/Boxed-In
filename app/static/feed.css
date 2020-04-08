@@ -1,0 +1,139 @@
+/* MAIN FEEDS */
+
+#main-screen {
+    display:flex;
+    flex-direction: row;
+    width: 100vw;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(50, 47, 46);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw;
+    padding-top: 5vh;
+    color: antiquewhite;
+    z-index: 1000;
+}
+
+#sidebar a {
+    font-family: "Work Sans", serif;
+    font-size: 1.5vw;
+    margin-bottom: 15px;
+    color: antiquewhite;
+}
+
+#sidebar a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#sidebar h3 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 2.5vw;
+    margin: 4vh;
+}
+
+#package, #package2 {
+    margin-bottom: 3vh;
+    font-size: 1vw;
+    width: 100%;
+}
+
+/* Package Icons */
+
+#logo {
+    width: 15vw;
+    padding: 20px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.package-icon {
+    width: 3vw;
+}
+
+/* Main contents */
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: rgb(230, 216, 196);
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    justify-content: space-between;
+    margin-top: 3vh;
+    font-family: "Work Sans", sans-serif;
+}
+
+#header {
+    font-size: 7vw;
+    margin-left: 5vw;
+    font-family: "Work Sans", serif;
+    font-weight: 600;
+}
+
+#guide {
+    background-color: rgb(50, 47, 46);
+    height: 10vh;
+    text-align: right;
+    color: white;
+    padding: 15px;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    font-size: 1.2vw;
+    width: 25vw;
+}
+
+
+/* Cards */
+
+#mainview {
+    margin: 2vh 5vw;
+    columns: 32vw;
+    column-gap: 3vw;
+    padding-bottom: 5vh;
+    z-index: 1000;
+}
+
+#card {
+    border: 4px solid black;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    break-inside: avoid-column;
+    margin-bottom: 5vh; 
+    padding: 1vh 1vw;
+    z-index: 1000;
+}
+
+#card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.25vw;
+    color: #455EB2;
+    height: 5vh;
+    padding: 1.25vw;
+    padding-bottom: 0;
+}
+
+.card-text {
+    text-align: left;
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.card-text img, .card-text iframe {
+    width: 100%;
+}

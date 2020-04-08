@@ -3,7 +3,6 @@
 // Access elements
 const logo = document.getElementById("logo")
 const sidebar = document.getElementById("sidebar")
-const mainContent = document.getElementById("mainContent")
 const packageIcon = document.getElementById("package")
 const packageIcon2 = document.getElementById("package2")
 
@@ -34,10 +33,11 @@ packageIcon2.onmouseleave = function () {
 }
 
 // Hover over sidebar
+
 sidebar.onmouseover = function () {
-    mainContent.style.filter = "brightness(80%)"
+    sidebar.style.backgroundColor = "rgb(43, 41, 40)"
 }
 
 sidebar.onmouseleave = function () {
-    mainContent.style.filter = "none"
+    sidebar.style.backgroundColor = "rgb(50, 47, 46)"
 }
