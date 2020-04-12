@@ -2,13 +2,14 @@
 
 /* Background */
 .background {
-  background-color: rgb(235, 218, 194);
+  background-color: rgb(216, 201, 179);
   width: 100vw;
   height: 100vh;
+  overflow: none;
 }
 
 .boxBackground {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -16,57 +17,124 @@
     pointer-events: none;
 }
 
-/* Title box */
-#homeBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10vh auto;
-    text-align: center;
-    width: 50vw;
-    border: 5px solid #5D626E;
-    padding: 8vh 0;
-    background-color: antiquewhite;
-}
-
 /* Title font styling */
-#welcome-title {
-  font-family: 'Libre Baskerville', serif;
-  max-width: 60vw;
-  font-size: 8vw;
-  font-weight: bold;
-}
+/* Large screens */
+@media all and (min-width: 600px) {
 
-#slogan {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 3vw;
-  margin-top: 3vh;
-  color: #5D626E;
-}
+    /* Title box */
+    #homeBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10vh auto;
+        text-align: center;
+        width: 50vw;
+        height: 60vh;
+        border: 5px solid rgb(57, 58, 60);
+        padding: 8vh 0;
+        background-color: antiquewhite;
+    }
 
-/* Sign up and Log in buttons */
-#home-buttons {
-  margin-top: 5vh;
-  z-index: 100;
+    #welcome-title {
+        font-family: 'Libre Baskerville', serif;
+        max-width: 60vw;
+        font-size: 8vw;
+        font-weight: bold;
+    }
+
+    #slogan {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 3vw;
+        margin-top: 3vh;
+        color: #5D626E;
+    }
+
+    /* Sign up and Log in buttons */
+    #home-buttons {
+        margin-top: 5vh;
+        z-index: 100;
+    }
+
+    #login {
+        margin-left: 10vh;
+    }
+
+}
+/* Phone screens */
+@media all and (max-width: 600px) {
+
+        /* Title box */
+    #homeBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3vh auto;
+        text-align: center;
+        width: 80vw;
+        height: 60vh;
+        border: 4px solid rgb(57, 58, 60);
+        padding: 20px;
+        background-color: antiquewhite;
+    }
+
+    #welcome-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    #slogan {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 25px;
+        margin-top: 3vh;
+        color: #5D626E;
+    }    
+
+    #home-buttons {
+        margin-top: 4vh;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #login {
+        margin-top: 2vh;
+    }
+
 }
 
 .btn {
   flex-grow: 1;
   padding: 10px;
-  min-width: 10vw;
+  width: 10vw;
+  min-width: 100px;
+  min-height: 30px;
   font-family: 'Work Sans', sans-serif;
-}
-
-#signup {
-  font-size: 1.5vw;
-}
-
-#login {
-  margin-left: 10vh;
-  font-size: 1.5vw;
+  font-size: 100%;
 }
 
 #signup:hover, #login:hover {
   background-color: #455EB2;
   border: 0px;
+}
+
+/* Rating */
+#rate {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    border: 0px;
+    font-size: 30px;
+    z-index: 10000;
+}
+
+#rate:hover {
+    background-color: #455EB2;
+    cursor: pointer;
 }

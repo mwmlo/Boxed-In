@@ -4,16 +4,14 @@
 
 #subtitle {
     display: block;
-  font-size: 1.4vw;
+  font-size: 140%;
   font-family: "Work Sans", sans-serif;
   text-align: left;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
 .boxScreen {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   text-align: center;
   align-content: center;
 }
@@ -29,8 +27,6 @@
   background-color: white;
   border: 4px solid black;
   border-radius: 30px;
-  width: 35vw;
-  height: 55vh;
   font-family: "Work Sans", sans-serif;
   margin-left: 100px;
   overflow-y: auto;
@@ -42,13 +38,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2vw;
+  font-size: 110%;
   margin: 2vh;
   padding: 10px;
 }
 
 .box h4 {
-  font-size: 1.5vw;
+  font-size: 125%;
 }
 
 /* Menu to add items to box */
@@ -61,14 +57,12 @@
 
 #list a {
   height: 7vh;
-  width: 30vw;
-  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
   border: none;
-  font-size: 1.3vw;
+  font-size: 120%;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -84,7 +78,6 @@
 #uploadMeme {
   font-size: 20px; 
   margin: 20px auto;
-  width: 50%;
 }
 
 #zoomForm, #memeForm, #songForm, #medForm, #messageForm {
@@ -100,7 +93,6 @@
   border-radius: 20px;
   width: 150px;
   color: white;
-  margin: 20px 0;
 }
 
 #submit:hover {
@@ -111,13 +103,11 @@
 /* Choose boxes to view in receive screen */
 
 #chooseBox {
-    width: 50vw;
     height: 55vh;
 }
 
 #viewBox {
     margin: 0;
-    width: 55vw;
     height: 55vh;
     overflow-y: auto;
 }
@@ -156,5 +146,107 @@
 #selectBoxMenu {
     width: 20vw;
     display: flex;
-    margin: 0 auto;
+    margin: 2vh auto;
+}
+
+/* Popup notification */
+#alert {
+    display: none;
+}
+
+/* Desktop Screen */
+@media all and (min-width: 600px) {
+
+    .boxScreen {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: 35vw;
+        height: 55vh;
+    }
+
+    #list a {
+        width: 30vw;
+        margin: 10px;
+    }
+
+    #submit {
+        margin: 20px 0;
+    }
+
+    #chooseBox {
+        width: 50vw;
+    }
+
+    #viewBox {
+        width: 55vw;
+    }
+
+    #packageInfo p {
+        font-size: 1vw; 
+        text-align: left;
+    }
+
+    #packageInfo .package-icon {
+        margin-right: 10px;
+        width: 20%;
+    }
+
+    #uploadMeme {
+        width: 50%;
+    }
+
+}
+
+/* Phone Screen */
+@media all and (max-width: 600px) {
+
+    #subtitle {
+        margin-top: 2vh;
+    }
+
+    .boxScreen {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box {
+        width: 100%;
+        height: 50vh;
+        margin: 5vh 0;
+    }
+
+    #list a {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #submit {
+        margin: 12px 0;
+    }
+
+    #chooseBox {
+        width: 100%;
+    }
+
+    #viewBox {
+        width: 100%;
+    }
+
+    #packageInfo p {
+        font-size: 3vw; 
+        text-align: left;
+    }
+
+    #packageInfo .package-icon {
+        margin-right: 10px;
+        width: 15%;
+    }
+
+    #uploadMeme {
+        width: 80%;
+    }
+    
 }

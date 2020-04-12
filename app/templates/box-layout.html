@@ -51,7 +51,7 @@
             <a href="/support">Support</a>
 
             <!-- User specific packages -->
-            <div id="package" style="margin-top: 5vh;">
+            <div id="package" style="">
                 <img src="/static/vectors/sendBox.svg" class="package-icon">
                 <a href="/send">Send a box</a>
             </div>
@@ -76,12 +76,19 @@
                 {% block main %}{% endblock %}
             </div>
 
+            <a href="https://forms.gle/xcw8XBMXQdzAkJmS7">
+                <button type="button" id="rate">
+                    <i class="material-icons">rate_review</i>
+                </button>
+            </a>
+
         </div>
 
     </main>
 
     {% block modals %}
     {% endblock %}
+    
 
     <script type="text/javascript" src="/static/hoverAnimations.js"></script>
 

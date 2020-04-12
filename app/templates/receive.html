@@ -46,8 +46,8 @@ What comes around goes around. The more boxes sent, the better!
             <!-- Display boxes -->
             {% for box in deliveries %}
             <div class="list-group-item list-group-item-action disabled" id="packageInfo">
-                <img src="/static/vectors/sendBox.svg" class="package-icon" style="margin-right: 10px;">
-                <p style="font-size: 1vw; text-align: left;">From: {{ box['senderName'] }}.  Sent {{ box['time'] }}.  <br><strong>Package ID: {{ box['packageId'] }}</strong>.</p>
+                <img src="/static/vectors/sendBox.svg" class="package-icon">
+                <p>From: {{ box['senderName'] }}.  Sent {{ box['time'] }}.  <br><strong>Package ID: {{ box['packageId'] }}</strong>.</p>
             </div>
             {% endfor %}
 

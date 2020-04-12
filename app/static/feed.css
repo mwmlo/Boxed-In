@@ -2,20 +2,15 @@
 
 #main-screen {
     display:flex;
-    flex-direction: row;
     width: 100vw;
     z-index: -1000;
     overflow: hidden;
 }
 
 #sidebar {
-    width: 20vw;
-    height: 100vh;
     background-color: rgb(50, 47, 46);
     display: flex;
-    flex-direction: column;
     padding: 1.5vw;
-    padding-top: 5vh;
     color: antiquewhite;
     z-index: 1000;
 }
@@ -23,7 +18,7 @@
 #sidebar a {
     font-family: "Work Sans", serif;
     font-size: 1.5vw;
-    margin-bottom: 15px;
+    margin: 15px;
     color: antiquewhite;
 }
 
@@ -34,12 +29,9 @@
 
 #sidebar h3 {
     font-family: "Libre Baskerville", serif;
-    font-size: 2.5vw;
-    margin: 4vh;
 }
 
 #package, #package2 {
-    margin-bottom: 3vh;
     font-size: 1vw;
     width: 100%;
 }
@@ -47,14 +39,9 @@
 /* Package Icons */
 
 #logo {
-    width: 15vw;
     padding: 20px;
     background-color: white;
     border-radius: 100%;
-}
-
-.package-icon {
-    width: 3vw;
 }
 
 /* Main contents */
@@ -62,7 +49,7 @@
 #mainContent {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 100vw;
     overflow-y: scroll;
     height: 100vh;
     background-color: rgb(230, 216, 196);
@@ -70,30 +57,21 @@
 
 #top {
     display: flex;
-    flex-direction: row;
-    height: 20vh;
     justify-content: space-between;
     margin-top: 3vh;
     font-family: "Work Sans", sans-serif;
 }
 
 #header {
-    font-size: 7vw;
     margin-left: 5vw;
     font-family: "Work Sans", serif;
     font-weight: 600;
 }
 
 #guide {
-    background-color: rgb(50, 47, 46);
-    height: 10vh;
-    text-align: right;
     color: white;
     padding: 15px;
-    margin-top: 5vh;
     margin-right: 5vw;
-    font-size: 1.2vw;
-    width: 25vw;
 }
 
 
@@ -101,8 +79,6 @@
 
 #mainview {
     margin: 2vh 5vw;
-    columns: 32vw;
-    column-gap: 3vw;
     padding-bottom: 5vh;
     z-index: 1000;
 }
@@ -121,19 +97,171 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.25vw;
+    font-size: 110%;
     color: #455EB2;
     height: 5vh;
-    padding: 1.25vw;
     padding-bottom: 0;
 }
 
 .card-text {
     text-align: left;
-    font-size: 1.5vw;
+    font-size: 125%;
     margin: 0;
 }
 
 .card-text img, .card-text iframe {
     width: 100%;
 }
+
+/* Desktop Screen */
+@media all and (min-width: 600px) {
+
+    #sidebar {
+        width: 20vw;
+        height: 100vh;
+        flex-direction: column;
+        padding: 1.5vw;
+        padding-top: 5vh;
+    }
+
+    #main-screen {
+        flex-direction: row;
+    }
+
+    #sidebar a {
+        font-size: 1.5vw;
+        margin-bottom: 15px;
+    }
+
+    #sidebar h3 {
+        font-size: 2vw;
+        margin: 4vh;
+    }
+
+    #package, #package2 {
+        margin-bottom: 3vh;
+        font-size: 1vw;
+    }
+
+    #package {
+        margin-top: 5vh;
+    }
+
+    #logo {
+        width: 10vw;
+        padding: 20px;
+    }
+
+    .package-icon {
+        width: 3vw;
+    }
+
+    #top {
+        max-height: 20vh;
+        flex-direction: row;
+    }
+
+    #header {
+        font-size: 7vw;
+    }
+
+    #guide {
+        background-color: rgb(50, 47, 46);
+        height: 7vw;
+        margin-top: 2vw;
+        margin-right: 5vw;
+        width: 25vw;
+        text-align: right;
+        font-size: 1.2vw;
+    }
+
+    #mainview {
+        columns: 32vw;
+        column-gap: 3vw;
+    }
+
+    #card-header {
+        padding: 1.25vw;
+    }
+
+}
+
+/* Phone Screen */
+@media all and (max-width: 600px) {
+    
+    #sidebar {
+        width: 100vw;
+        height: 10vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1.5vw;
+    }
+
+    #main-screen {
+        flex-direction: column;
+    }
+
+    #sidebar a {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    #sidebar h3 {
+        display: none;
+    }
+
+    #package {
+        margin-left: 30px;
+        margin-top: -30px;
+    }
+
+    #package2 {
+        margin-left: 160px;
+        margin-top: -32px;
+    }
+
+    #package, #package2 {
+        font-size: 1vw;
+        width: 200px;
+    }
+
+    #logo {
+        width: 50px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .package-icon {
+        width: 20px;
+        margin-top: -5px;
+    }
+
+    #top {
+        height: 20vh;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+
+    #header {
+        font-size: 15vw;
+    }
+
+    #guide {
+        background-color: rgba(50, 47, 46, 0.75);
+        max-height: 10vh;
+        width: 100vw;
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    #mainview {
+        columns: 80vw;
+        column-gap: 3vh;
+    }
+
+    #card-header {
+        padding: 2vh 5vw;
+    }
+
+}
+

@@ -27,41 +27,82 @@ main {
   text-align: center;
   background-color: antiquewhite;
   padding: 5vw;
-  min-width: 30vw;
-  max-width: 45vw;
   border-radius: 50px;
   z-index: 10;
 }
 
+/* Desktop */
+@media all and (min-width: 600px) {
+    .form {
+        min-width: 30vw;
+        max-width: 45vw;
+    }
+
+    .form h1 {
+        font-size: 4.5vw;
+        margin-bottom: 5vh;
+    }
+
+    #field {
+        width: 20vw;
+    }
+
+    #enterButton {
+        width: 10vw;
+    }
+}
+
+/* Phone screens */
+@media all and (max-width: 600px) {
+    .form {
+        min-width: 350px;
+        max-width: 400px;
+        padding: 30px;
+    }
+
+    .form h1 {
+        margin-top: 5vh;
+        font-size: 60px;
+    }
+
+    #field {
+        width:100%;
+    }
+
+    #enterButton {
+        width: 200px;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+    }
+}
+
 /* Text in form */
 .form h1 {
-  font-size: 4.5vw;
-  margin-bottom: 5vh;
   font-family: "Libre Baskerville", serif;
   font-weight: bold;
+  margin-bottom: 5vh;
 }
 
 .form p {
-  font-size: 1.25vw;
+  font-size: 125%;
   margin-bottom: 5vh;
 }
 
 .form h4 {
     font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 150%;
   margin-bottom: 5vh;
 }
 
 #userForm h5 {
     font-weight: lighter;
     margin-bottom: 5vh;
-    font-size: 1.25vw;
+    font-size: 100%;
 }
 
 /* Input fields */
 #field {
-  width: 20vw;
-  font-size: 1.25vw;
+  font-size: 110%;
   height: 5vh;
   border: none;
   border-bottom: 3px solid black;
@@ -71,8 +112,7 @@ main {
     border-radius: 20px;
     background-color: rgb(76, 80, 91);
     border: none;
-    font-size: 1.25vw;
-    width: 10vw;
+    font-size: 100%;
     height: 5vh;
     padding: 5px;
     color: white;
