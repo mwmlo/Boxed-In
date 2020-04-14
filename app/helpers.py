@@ -101,12 +101,10 @@ def sortBox(category, tableName):
     )
 
     content = db.execute(selectItem, [receiverId]).fetchall()
-    print(content)
-
+    
+    # Ensure content exists
     if len(content) == 0:
         content = [[()]]
-
-    print("Altered content is: ", content)
 
     if content[0][0]:
 

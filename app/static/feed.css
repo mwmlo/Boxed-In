@@ -162,12 +162,12 @@
     }
 
     #header {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     #guide {
         background-color: rgb(50, 47, 46);
-        height: 100%;
+        height: 70%;
         max-height: 7vw;
         margin: auto 5vw;
         width: 30vw;
