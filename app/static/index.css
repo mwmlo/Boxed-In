@@ -59,36 +59,42 @@
         margin-left: 10vh;
     }
 
+    .errorPage {
+        width: 40vw;
+    }
+
+    .errorPage h1 {
+        font-size: 5vw;
+    }
+
+    .errorPage p {
+        font-size: 2vw;
+    }
+
 }
 /* Phone screens */
 @media all and (max-width: 600px) {
 
-        /* Title box */
+    /* Title box */
     #homeBox {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 3vh auto;
+        align-content: center;
+        margin: 10vh auto;
         text-align: center;
         width: 80vw;
-        height: 60vh;
+        height: 55vh;
         border: 4px solid rgb(57, 58, 60);
-        padding: 20px;
+        padding: 25px;
         background-color: antiquewhite;
     }
 
     #welcome-title {
         font-family: 'Libre Baskerville', serif;
-        font-size: 80px;
+        font-size: 15vw;
         font-weight: bold;
     }
-
-    #slogan {
-        font-family: 'Libre Baskerville', serif;
-        font-size: 25px;
-        margin-top: 3vh;
-        color: #5D626E;
-    }    
 
     #home-buttons {
         margin-top: 4vh;
@@ -101,6 +107,14 @@
         margin-top: 2vh;
     }
 
+    .errorPage h1 {
+        font-size: 45px;
+    }
+
+    .errorPage p {
+        font-size: 20px;
+    }
+
 }
 
 .btn {
@@ -110,7 +124,7 @@
   min-width: 100px;
   min-height: 30px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 100%;
+  font-size: 120%;
 }
 
 #signup:hover, #login:hover {

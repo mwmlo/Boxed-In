@@ -101,9 +101,14 @@ def sortBox(category, tableName):
     )
 
     content = db.execute(selectItem, [receiverId]).fetchall()
+    print(content)
 
-    # If content exists
-    if content:
+    if len(content) == 0:
+        content = [[()]]
+
+    print("Altered content is: ", content)
+
+    if content[0][0]:
 
         # Access sender information
         senderId = db.execute("SELECT senderId FROM packages WHERE receiverId = ? AND status = 1", [receiverId]).fetchall()[0][0]
@@ -112,7 +117,3 @@ def sortBox(category, tableName):
         # Add to appropriate category database.
         insertItem = "INSERT INTO " + tableName + " VALUES (?, DATE('now'), ?, ?)"
         db.execute(insertItem, [senderId, content[0][0], senderUserName])
-
-    else:
-
-        return apology("We couldn't access the contents of the box.")
