@@ -8,7 +8,7 @@ from datetime import datetime
 import sqlite3
 import random
 
-from app.helpers import apology, packingBox, saveImage, sortBox
+from app.helpers import apology, packingBox, saveImage, sortBox, checkNewBox
 
 @app.route("/send", methods=["GET", "POST"])
 def send():
@@ -68,7 +68,9 @@ def send():
         if not boxList:
             boxList = [()]
 
-        return render_template("send.html", username=username[0][0], boxList=boxList[0])
+        newBox = checkNewBox()
+
+        return render_template("send.html", username=username[0][0], boxList=boxList[0], newBox=newBox)
 
 
 @app.route("/release")

@@ -145,10 +145,31 @@
     border-radius: 100%;
     border: 0px;
     font-size: 30px;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 #rate:hover {
     background-color: #455EB2;
+    cursor: pointer;
+}
+
+/* Box alert */
+#boxAlert {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+    border: 0px;
+    font-size: 30px;
+    z-index: 10000;
+}
+
+#boxAlert:hover {
+    background-color: black;
     cursor: pointer;
 }

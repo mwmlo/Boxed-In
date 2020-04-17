@@ -115,3 +115,17 @@ def sortBox(category, tableName):
         # Add to appropriate category database.
         insertItem = "INSERT INTO " + tableName + " VALUES (?, DATE('now'), ?, ?)"
         db.execute(insertItem, [senderId, content[0][0], senderUserName])
+
+
+# Function to check if there are new boxes
+def checkNewBox():
+
+    # Access database
+    db = sqlite3.connect("boxedin.db", isolation_level=None).cursor()
+    receiverId = session["user_id"]
+
+    # Access unopened boxes
+    unopenBox = db.execute("SELECT * FROM packages WHERE receiverId = ? AND status = 1", [receiverId]).fetchall()
+
+    if len(unopenBox) > 0:
+        return True

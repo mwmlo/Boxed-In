@@ -4,6 +4,8 @@ from flask import Flask, flash, redirect, render_template, request, session
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 import sqlite3
 
+from app.helpers import apology, checkNewBox
+
 @app.route("/zoomlife")
 def zoomlife():
 
@@ -15,6 +17,8 @@ def zoomlife():
         "SELECT username FROM users WHERE id = ?", [session["user_id"]]
     ).fetchall()
 
+    newBox = checkNewBox()
+
     # Access all #zoomlife posts
     zoomLifePosts = db.execute("SELECT * FROM zoom ORDER BY time DESC").fetchall()
 
@@ -22,7 +26,7 @@ def zoomlife():
         zoomLifePosts = [("", "", "No posts yet. Add one now!", "Oh no...")]
 
     return render_template(
-        "zoomlife.html", username=username[0][0], zoomLifePosts=zoomLifePosts
+        "zoomlife.html", username=username[0][0], zoomLifePosts=zoomLifePosts, newBox=newBox
     )
 
 
@@ -37,13 +41,15 @@ def memes():
         "SELECT username FROM users WHERE id = ?", [session["user_id"]]
     ).fetchall()
 
+    newBox = checkNewBox()
+
     # Access all meme posts
     memePosts = db.execute("SELECT * FROM memes ORDER BY time DESC").fetchall()
 
     if not memePosts:
         memePosts = [("", "", "No posts yet. Add one now!", "Oh no...")]
 
-    return render_template("memes.html", username=username[0][0], memePosts=memePosts)
+    return render_template("memes.html", username=username[0][0], memePosts=memePosts, newBox=newBox)
 
 
 @app.route("/meditations")
@@ -57,10 +63,12 @@ def meditations():
         "SELECT username FROM users WHERE id = ?", [session["user_id"]]
     ).fetchall()
 
+    newBox = checkNewBox()
+
     if not username:
         username = [("", "", "No posts yet. Add one now!", "Oh no...")]
 
-    return render_template("meditations.html", username=username[0][0])
+    return render_template("meditations.html", username=username[0][0], newBox=newBox)
 
 
 @app.route("/support")
@@ -74,6 +82,8 @@ def support():
         "SELECT username FROM users WHERE id = ?", [session["user_id"]]
     ).fetchall()
 
+    newBox = checkNewBox()
+
     # Access all #zoomlife posts
     supportPosts = db.execute("SELECT * FROM support ORDER BY time DESC").fetchall()
 
@@ -81,5 +91,5 @@ def support():
         supportPosts = [("", "", "No posts yet. Add one now!", "Oh no...")]
 
     return render_template(
-        "support.html", username=username[0][0], supportPosts=supportPosts
+        "support.html", username=username[0][0], supportPosts=supportPosts, newBox=newBox
     )

@@ -32,3 +32,13 @@ Memes
 </div>
 {% endfor %}
 {% endblock %}
+
+{% block alert %}
+{% if newBox %}
+<a href="/receive">
+    <button type="button" id="boxAlert">
+        <i class="material-icons">error_outline</i>
+    </button>
+</a>
+{% endif %}
+{% endblock %}
