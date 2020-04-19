@@ -30,7 +30,7 @@ def zoomlife():
     )
 
 
-@app.route("/memes")  # TO DO AFTER UPLOADING
+@app.route("/memes")
 def memes():
 
     # Access database

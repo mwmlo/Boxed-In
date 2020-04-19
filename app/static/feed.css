@@ -10,9 +10,11 @@
 #sidebar {
     background-color: rgb(50, 47, 46);
     display: flex;
-    padding: 1.5vw;
+    padding: 1vw;
     color: antiquewhite;
     z-index: 1000;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
 }
 
 #sidebar a {
@@ -81,6 +83,7 @@
     margin: 2vh 5vw;
     padding-bottom: 5vh;
     z-index: 1000;
+    /* display: flex; */
 }
 
 #card {
@@ -120,7 +123,6 @@
         width: 20vw;
         height: 100vh;
         flex-direction: column;
-        padding: 1.5vw;
         padding-top: 5vh;
     }
 
@@ -135,7 +137,7 @@
 
     #sidebar h3 {
         font-size: 2vw;
-        margin: 4vh;
+        margin: 2vh;
     }
 
     #package, #package2 {
@@ -266,14 +268,13 @@
     #top {
         height: 25vh;
         flex-direction: column;
-        margin-bottom: 3vh;
-        
+        margin-bottom: 4vh;
     }
 
     #header {
         font-size: 15vw;
         height: 10vh;
-        margin-bottom: 5vh;
+        margin: 2vh 0 4vh 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -281,10 +282,14 @@
 
     #guide {
         background-color: rgba(50, 47, 46, 0.75);
-        height: 10vh;
+        max-height: 12vh;
         width: 100vw;
         text-align: center;
-        font-size: 100%;
+    }
+
+    #guide p {
+        margin: auto 0;
+        font-size: 4vw;
     }
 
     #mainview {

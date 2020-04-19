@@ -1,7 +1,6 @@
 /* Main CSS */
 
 main {
-  overflow-x: auto;
   text-align: center;
 }
 
@@ -36,6 +35,8 @@ main {
         min-width: 30vw;
         max-width: 45vw;
         margin: 10vh;
+        max-height: 90vh;
+        overflow-y: scroll;
     }
 
     .form h1 {
@@ -49,6 +50,12 @@ main {
 
     #enterButton {
         width: 10vw;
+        height: 5vh;
+        font-size: 100%;
+    }
+
+    #welcomeDesc {
+        font-size:30px;
     }
 }
 
@@ -56,15 +63,15 @@ main {
 @media all and (max-width: 600px) {
     .form {
         margin: 10vh auto;
-        min-width: 350px;
-        max-width: 400px;
+        width: 80vw;
+        max-height: 90vh;
         padding: 30px;
-        max-height: 600px;
+        overflow-y: scroll;
     }
 
     .form h1 {
-        margin: 3vh;
-        font-size: 60px;
+        margin: 2vh 3vw;
+        font-size: 13vw;
     }
 
     #field {
@@ -72,9 +79,18 @@ main {
     }
 
     #enterButton {
-        width: 200px;
-        margin-top: 2vh;
-        margin-bottom: 5vh;
+        width: 40vw;
+        margin-bottom: 3vh;
+        font-size: 80%;
+        height: 5vh;
+    }
+
+    #welcomeTitle {
+        font-size: 10vw;
+    }
+
+    #welcomeDesc {
+        font-size: 5vw;
     }
 }
 
@@ -86,14 +102,13 @@ main {
 }
 
 .form p {
-  font-size: 125%;
-  margin-bottom: 5vh;
+  font-size: 100%;
+  margin-bottom: 2vh;
 }
 
 .form h4 {
     font-weight: 400;
-  font-size: 150%;
-  margin-bottom: 5vh;
+  font-size: 100%;
 }
 
 #userForm h5 {
@@ -104,7 +119,7 @@ main {
 
 /* Input fields */
 #field {
-  font-size: 110%;
+  font-size: 100%;
   height: 5vh;
   border: none;
   border-bottom: 3px solid black;
@@ -114,8 +129,6 @@ main {
     border-radius: 20px;
     background-color: rgb(76, 80, 91);
     border: none;
-    font-size: 100%;
-    height: 5vh;
     padding: 5px;
     color: white;
 }

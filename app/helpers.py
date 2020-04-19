@@ -88,11 +88,6 @@ def sortBox(category, tableName):
     # Access database
     db = sqlite3.connect("boxedin.db", isolation_level=None).cursor()
 
-    # Access current user's name
-    username = db.execute(
-        "SELECT username FROM users WHERE id = ?", [session["user_id"]]
-    ).fetchall()
-
     receiverId = session["user_id"]
 
     # Access item in box

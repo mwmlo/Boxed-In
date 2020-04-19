@@ -2,7 +2,7 @@
 
 .meditation-view {
   display: flex;
-  width: 70vw;
+  position: absolute;
 }
 
 /* Cards containing meditations */
@@ -12,7 +12,6 @@
   border: 4px solid black;
   border-radius: 30px;
   font-family: "Work Sans", sans-serif;
-  margin: 25px;
 }
 
 .card i {
@@ -64,10 +63,12 @@
     .meditation-view {
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
     }
 
     #med-card {
         width: 25vw;
+        margin: 25px;
     }
 
 }
@@ -77,10 +78,12 @@
 
     #med-card {
         width: 60vw;
+        margin: 25px auto;
     }
 
     .meditation-view {
         flex-direction: column;
+        width: 100%;
     }
 
 }
@@ -90,10 +93,12 @@
 
     .meditation-view {
         flex-direction: column;
+        width: 100%;
     }
 
     #med-card {
         width: 80vw;
+        margin: 25px auto;
     }
 
 }

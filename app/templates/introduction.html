@@ -6,13 +6,13 @@ Welcome
 {% endblock %}
 
 {% block main %}
-<h1>Welcome to Boxed In.</h1>
-<h1 style="font-size:30px;">You have successfully signed up!</h1>
+<h1 id="welcomeTitle">Welcome to Boxed In.</h1>
+<h1 id="welcomeDesc">You have successfully signed up!</h1>
 <h4>Boxed In is a platform to encourage community spirit among students and teachers during 2020.</h4>
 <br>
 <h4>Share and receive random virtual care packages from containing funny stories from Zoom, memes, videos, meditations, and supportive messages.</h4>
 
-<video width="320" height="240" style="margin-bottom: 5vh;" controls>
+<video width="100%" style="margin: 5vh auto;" controls>
     <source src="static/Boxed In Explanation.mp4" type="video/mp4">
     Your browser does not support the video tag. Please click <a href="https://youtu.be/kQ3IE06GNVQ">here</a> to watch the introduction video.
 </video>
@@ -20,7 +20,7 @@ Welcome
 <h5>When using Boxed In, please be mindful of what you send.</h5>
 
 <a href="/login">
-    <button class="btn btn-primary" id="enterButton" style="width: 15vw; margin-bottom: 5vh;">Next</button>
+    <button class="btn btn-primary" id="enterButton">Next</button>
 </a>
 
 {% endblock %}
