@@ -6,6 +6,7 @@ from flask_session import Session
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 import sqlite3
+import re
 
 # Landing page
 @app.route("/")
@@ -23,6 +24,7 @@ def register():
     if request.method == "POST":
 
         usernameInput = request.form.get("username")
+        email = request.form.get("email")
         passwordInput = request.form.get("password")
         confirmPass = request.form.get("confirmation")
 
@@ -38,6 +40,17 @@ def register():
         # If username field is blank
         if not usernameInput:
             return apology("Please enter a username.")
+
+        # If email field is blank
+        if not email:
+            return apology("Please enter an email address.")
+
+        # Check if email is school email
+        domain = re.search("@[\w.-]+", email)
+        domain = str(domain.group())
+
+        if domain != "@sec.ycis-hk.com" and domain != "@hk.ycef.com":
+            return apology("Please enter a YCIS HK school email address.")
 
         # If password fields are blank
         if not passwordInput or not confirmPass:
@@ -58,9 +71,9 @@ def register():
         # Insert the new user into users, storing a hash of the user’s password, not the password itself
         passwordHash = generate_password_hash(passwordInput)
 
-        insertDataUsers = [str(usernameInput), str(passwordHash)]
+        insertDataUsers = [str(usernameInput), str(email), str(passwordHash)]
         db.execute(
-            "INSERT INTO users (username, passhash) VALUES (?, ?)", insertDataUsers
+            "INSERT INTO users (username, email, passhash) VALUES (?, ?, ?)", insertDataUsers
         )
 
         # Introduce Boxed In
@@ -99,7 +112,7 @@ def login():
 
         # Ensure username exists and password is correct
         if len(userMatches) != 1 or not check_password_hash(
-            userMatches[0][2], passwordInput
+            userMatches[0][3], passwordInput
         ):
             return apology("Invalid username and/or password.")
 
@@ -121,3 +134,8 @@ def logout():
 
     # Redirect user to login form
     return redirect("/")
+
+# Rules
+@app.route("/rules")
+def rules():
+    return render_template("rules.html")

@@ -83,14 +83,11 @@ def release():
     # Choose a random user
     minId = db.execute("SELECT MIN(id) FROM users").fetchall()[0][0]
     maxId = db.execute("SELECT MAX(id) FROM users").fetchall()[0][0]
-    print(minId, maxId)
 
     # As long as the user is not yourself!
     randomUserId = random.randint(minId, maxId)
     while randomUserId == userId:
         randomUserId = random.randint(minId, maxId)
-
-    print(randomUserId)
 
     # Send to user and set package status to sent (1)
     db.execute(

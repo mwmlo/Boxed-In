@@ -54,7 +54,7 @@ db = sqlite3.connect("boxedin.db", isolation_level=None).cursor()
 
 # Create tables
 db.execute(
-    "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, passhash TEXT)"
+    "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, email TEXT, passhash TEXT)"
 )
 db.execute(
     "CREATE TABLE IF NOT EXISTS packages (packageId INTEGER PRIMARY KEY AUTOINCREMENT, senderId INTEGER, senderName TEXT, receiverId INTEGER, zoomlife TEXT, meme TEXT, video TEXT, meditation TEXT, message TEXT, time DATETIME, status INTEGER)"

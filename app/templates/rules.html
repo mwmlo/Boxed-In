@@ -1,0 +1,23 @@
+<!-- WELCOME PAGE -->
+{% extends "user-layout.html" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block main %}
+<h1 id="welcomeTitle">Rules of Conduct</h1>
+<h1 id="welcomeDesc">When using Boxed In, please keep these rules in mind:</h5>
+<h5>Content uploaded must be appropriate and inoffensive, i.e. no cyberbullying, doxxing, etc.</h5>
+<h5>Do not use photos of other students or staff without their consent.</h5>
+<h5>Do not share any personal information on this platform. Remember that any content sent in boxes will be shared on public feeds when opened!</h5>
+<h5>Do not share any recognisable information about other members of the school community outside of Boxed In.</h5>
+<h4>Boxed In is a supportive platform and we take student security seriously. If you break any of these rules of conduct, your account and any content sent by you will be removed.</h4>
+
+<h1 id="welcomeDesc" style="margin-top: 3vh;">By using Boxed In, you agree to abide by these rules.</h1>
+
+<a href="/login">
+    <button class="btn btn-primary" id="enterButton">Agree</button>
+</a>
+
+{% endblock %}

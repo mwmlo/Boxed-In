@@ -52,6 +52,7 @@ main {
         width: 10vw;
         height: 5vh;
         font-size: 100%;
+        margin-bottom: 5vh;
     }
 
     #welcomeDesc {
@@ -109,12 +110,13 @@ main {
 .form h4 {
     font-weight: 400;
   font-size: 100%;
+  margin-bottom: 3vh;
 }
 
 #userForm h5 {
     font-weight: lighter;
     margin-bottom: 5vh;
-    font-size: 100%;
+    font-size: 2.5vh;
 }
 
 /* Input fields */
