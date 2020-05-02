@@ -10,6 +10,8 @@ Boxed In allows users to share funny stories, recommend memes and videos, listen
 2. Users can upload and link content into a virtual care box. When submitted, the box's contents will be  sent to another random user.
 3. When the receiver opens the box, the contents of the box will also be shared publicly on the respective feeds (#ZoomLife, Memes and Support).
 
+**NOTE: BOXED IN IS ONLY ACCESSIBLE TO MEMBERS OF YEW CHUNG INTERNATIONAL SCHOOL.**
+
 ## Sample Screens
 
 **Log In Screen**
