@@ -29,6 +29,11 @@ Boxed In allows users to share funny stories, recommend memes and videos, listen
 **Receive Boxes**
 ![Receive Boxes](https://drive.google.com/uc?id=1abnJCmCeFTf7AdS-UWjEHkBZVNN7yUEJ)
 
+**Adaptive Web Design - Mobile Screens**
+![ZoomLife](https://drive.google.com/uc?id=1anG3KTzcGeY08CinqEU_V_Y5OCQlYjvp)
+![Send Boxes](https://drive.google.com/uc?id=1awgGYZTa_xc-HkhOGTMIFs4bQh8NQODL)
+![Meditation](https://drive.google.com/uc?id=1azQ2ma3cezZw5weMtglliS2ZWaP_D5xo)
+
 ## File system
 
 - `requirements.txt`: Flask requirements needed
